@@ -1,0 +1,16 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.services h1 {
+  box-sizing: border-box;
+  width: 340px;
+  height: 80px;
+  color: #214869;
+  border-bottom: 1px solid #ffdddd;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}

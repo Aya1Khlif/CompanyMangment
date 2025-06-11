@@ -1,0 +1,70 @@
+.Contact {
+  background-image: url('../../assets/contact/background.webp');
+  position: relative;
+  z-index: 1;
+}
+
+.contact-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(167, 161, 161, 0.8); 
+  z-index: -22;
+}
+.Contact h1{
+    box-sizing: border-box;
+    width: 340px;
+    height: 80px;
+    color: #214869;
+    border-bottom: 1px solid #FFDDDD;
+}
+.contact h2 {
+  width: 271px;
+  height: 42px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 42px;
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, #bf0000 12.5%, #3d79ac 99.56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.contact ul li span{
+
+font-family: 'Josefin Sans';
+
+font-weight: 800;
+font-size: 20px;
+line-height: 18px;
+letter-spacing: 0.04em;
+color: #214869;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.btn{
+padding: 1px 5px;
+width: 102px;
+height: 43px;
+background: linear-gradient(90deg, rgba(33, 72, 105, 0.8) 0%, rgba(191, 0, 0, 0.8) 100%);
+border-radius: 23px;
+color: #fff;
+font-size: 20px;
+font-weight: 500;
+flex: none;
+flex-grow: 0;
+}
+.no-resize {
+  resize: none;
+}

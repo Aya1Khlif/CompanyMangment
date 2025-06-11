@@ -1,0 +1,31 @@
+.cart {
+  width: 456px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: #fff; 
+  font-weight: 700;
+}
+
+.cart-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-info {
+  font-size: 20px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.5);  
+  color: #fff;
+  font-weight: 600;
+}
+
+.cart-content {
+  position: absolute;
+}

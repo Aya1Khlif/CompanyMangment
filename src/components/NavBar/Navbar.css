@@ -1,0 +1,59 @@
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .navbar-scrolled {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.items{
+    color: #214869;
+    font-weight: 600;
+    font-size: 25px;
+}
+.items:hover{
+    color: #4678a4;
+}
+.buuton-info{
+    font-size: 20px;
+    background-color: #f5f5f5;
+    color: #BF0000;
+    font-weight: 500;
+    border: 1px solid #F5F5F5;
+    box-shadow: 1px 1px 2.6px #CFCACA, inset 4px 3px 4.6px rgba(255, 255, 255, 0.5);
+    border-radius: 27px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .items {
+        font-size: 16px;
+    }
+    .buuton-info {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 995px) {
+    .items {
+        font-size: 15px;
+    }
+    .buuton-info {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .items {
+        font-size: 14px;
+    }
+    .buuton-info {
+        font-size: 14px;
+    }
+}

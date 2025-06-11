@@ -1,0 +1,46 @@
+.client-gallery h1 {
+  box-sizing: border-box;
+  width: 340px;
+  height: 80px;
+  color: #214869;
+  border-bottom: 1px solid #ffdddd;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.client-gallery {
+  text-align: center;
+}
+
+.client-images-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.client-images img {
+  height: auto;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.client-images-section img:hover {
+  transform: scale(1.2);
+
+}
+
+@media screen and (max-width: 768px) {
+  .client-images img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .client-images img {
+    width: 120px;
+  }
+}

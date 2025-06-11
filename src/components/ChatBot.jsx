@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import Chatbot from 'react-chatbot-kit';
-// import 'react-chatbot-kit/build/main.css'; // Commented out, using custom CSS
 import './ChatBot.css';
 
 function ChatBot() {
@@ -8,9 +7,9 @@ function ChatBot() {
     { id: 1, message: 'مرحبًا بك! كيف أساعدك اليوم؟', type: 'bot' }
   ]);
   const [input, setInput] = useState('');
+  const [isVisible, setIsVisible] = useState(true);
   const messagesEndRef = useRef(null);
 
-  // Quick replies (same as your original)
   const quickReplies = [
     'خدماتنا', 'الأسعار', 'الدعم الفني', 'الأمن السيبراني', 'استشارات', 'اتصل بنا',
     'التسويق الرقمي', 'تطوير الألعاب', 'إدارة المشاريع', 'خدمات السحابة', 'تصميم واجهات',
@@ -23,7 +22,6 @@ function ChatBot() {
     'إعلانات مدفوعة', 'تخطيط الموارد', 'تحسين الأداء', 'عقود ذكية'
   ];
 
-  // Updated FAQ responses to include all quick replies
   const faqResponses = {
     'مرحبًا': 'مرحبًا! أهلًا بك في شركتنا، كيف أقدر أساعدك؟',
     'مرحبا': 'مرحبًا! أهلًا بك في شركتنا، كيف أقدر أساعدك؟',
@@ -81,7 +79,6 @@ function ChatBot() {
     'كيف أحمي شبكتي؟': 'نقدم حلول جدار حماية وكشف التسلل.',
     'هل تقدمون تطوير Backend؟': 'نعم، نطور أنظمة خلفية قوية.',
     'شو الـ Frontend؟': 'نصمم واجهات أمامية متجاوبة.',
-    // Added responses for quick replies
     'خدماتنا': 'نقدم تطوير برمجيات، أمن سيبراني، استشارات، تسويق رقمي، تطوير ألعاب، خدمات سحابية، وأكثر.',
     'الأسعار': 'الأسعار تبدأ من 10 يورو، تواصلي لتفاصيل.',
     'الدعم الفني': 'دعمنا 24/7 عبر info@company.com.',
@@ -200,9 +197,47 @@ function ChatBot() {
     setInput('');
   };
 
+  const handleCloseChatbot = () => {
+    setIsVisible(false);
+  };
+
+  const handleClearConversation = () => {
+    setMessages([{ id: 1, message: 'مرحبًا بك! كيف أساعدك اليوم؟', type: 'bot' }]);
+    setInput('');
+  };
+
+  if (!isVisible) {
+    return (
+      <button
+        className="chatbot-toggle-button"
+        onClick={() => setIsVisible(true)}
+      >
+        🗨️
+      </button>
+    );
+  }
+
   return (
     <div className="chat-bot">
-      <div className="chat-header">روبوت المحادثة</div>
+      <div className="chat-header">
+        <span className="chat-title">روبوت المحادثة</span>
+        <div className="chat-header-buttons">
+          <button
+            className="clear-button"
+            onClick={handleClearConversation}
+            title="مسح المحادثة"
+          >
+            🗑️
+          </button>
+          <button
+            className="close-button"
+            onClick={handleCloseChatbot}
+            title="إغلاق"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
       <div className="chat-messages">
         {messages.map((msg, index) => (
           <div
